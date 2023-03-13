@@ -2,16 +2,17 @@ import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+} from "react-vertical-timeline-component"; // import components for vertical timeline view
+import { motion } from "framer-motion"; // import animation component
 
-import "react-vertical-timeline-component/style.min.css";
+import "react-vertical-timeline-component/style.min.css"; // import CSS styles for vertical timeline view
 
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { styles } from "../styles"; // import custom styles
+import { experiences } from "../constants"; // import experience data
+import { SectionWrapper } from "../hoc"; // import higher-order component for section wrapper
+import { textVariant } from "../utils/motion"; // import motion utilities
 
+// functional component to render experience card
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -56,6 +57,7 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
+// functional component to render work experience section
 const Experience = () => {
   return (
     <>
@@ -81,5 +83,5 @@ const Experience = () => {
     </>
   );
 };
-
+// export section wrapped with higher-order component and work section identifier
 export default SectionWrapper(Experience, "work");

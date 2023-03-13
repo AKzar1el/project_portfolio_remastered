@@ -1,3 +1,4 @@
+// Import React, Tilt, motion and other necessary components and constants
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
@@ -7,6 +8,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
+// ServiceCard functional component which renders each service card
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
@@ -35,6 +37,7 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
+// About functional component which renders the About section
 const About = () => {
   return (
     <>
@@ -65,4 +68,5 @@ const About = () => {
   );
 };
 
+// Exporting About wrapped in the SectionWrapper
 export default SectionWrapper(About, "about");
